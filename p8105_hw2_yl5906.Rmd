@@ -12,7 +12,7 @@ library(readxl)
 library(janitor)
 ```
 
-#question 1
+#Question 1
 
 ```{r}
 #clean pols-month data
@@ -49,7 +49,7 @@ glimpse(final_data)
 
 ```
 
-#data description
+##data description
 
 The pols_month dataset contains `r nrow(pols_month)` observations from `r min(pols_month$year)` to `r max(pols_month$year)`. Key variables include year, month, gov_gop, sen_gop, rep_gop, gov_dem, sen_dem, rep_dem, and president. it means the number of republican and democratic governors, senators, and representatives at each time point, also the party affiliation of the president.
 
@@ -59,8 +59,11 @@ The unemployment dataset contains `r nrow(unemployment)` observations from `r mi
 
 The resulting merged dataset has `r nrow(final_data)` observations and `r ncol(final_data)` variables, spanning from `r min(final_data$year)` to `r max(final_data$year)`. Key variables include year, month, gov_gop, sen_gop, rep_gop, gov_dem, sen_dem, rep_dem, president, close, and unemployment_rate.
 
+<br><br>
 
-#question 2
+
+
+#Question 2
 
 ```{r}
 #clean Mr Trash wheel data
@@ -128,14 +131,17 @@ cat("Professor Trash Wheel total weight:", prof_total_weight, "tons\n")
 cat("Gwynnda cigarette butts in June 2022:", gwynnda_cigarettes, "\n")
 ```
 
-#data description
+##data description
 
 The Mr Trash Wheel data contains `r nrow(mr_trash_wheel)` observations from `r min(mr_trash_wheel$year)` to `r max(mr_trash_wheel$year)`. The Professor Trash Wheel dataset contains `r nrow(prof_trash_wheel)` observations from `r min(prof_trash_wheel$year)` to `r max(prof_trash_wheel$year)`. The Gwynnda data contains `r nrow(gwynnda_trash_wheel)` observations from `r min(gwynnda_trash_wheel$year)` to `r max(gwynnda_trash_wheel$year)`. The combined dataset has `r nrow(combined_trash_wheel)` observations and `r ncol(combined_trash_wheel)` variables. Key variables include dumpster, month, year, date, weight_tons, volume_cubic_yards, and various trash types like plastic_bottles, cigarette_butts, and sports_balls.
 
 so as the code calculation the total weight collected by Professor Trash Wheel was `r prof_total_weight` tons. Gwynnda collected `r gwynnda_cigarettes` cigarette butts in june 2022.
 
+<br><br>
 
-#question 3
+
+
+#Question 3
 
 ```{r}
 #normalize ZIP to 5 digit string
@@ -211,8 +217,8 @@ print(top10_drops)
 ```
 
 
-#data description summary
+##data description
 
 So there are 10450 observations, 149 unique ZIP codes and 42 unique neighborhood.
-Like 10464(Southeast Bronx) and 10474，10475，11224 etc.present in ZIP Codes but missing in Zillow. These zip maybe use for industrialize area or other place do not contain residences.The areas that experienced the largest decline were the central districts of Manhattan and the neighborhoods near some office areas. This was because during the pandemic, people were working from home or losing their jobs, resulting in a decrease in the number of tenants in these central areas.
+Like 10464(Southeast Bronx) and 10474，10475，11224 etc. present in ZIP Codes but missing in Zillow. These zip maybe use for industrialize area or other place do not contain residences.The areas that experienced the largest decline were the central districts of Manhattan and the neighborhoods near some office areas. This was because during the pandemic, people were working from home or losing their jobs, resulting in a decrease in the number of tenants in these central areas.
 
